@@ -9,6 +9,12 @@ $(".popup_box a").click(function(){
     $(".info_box").fadeOut();
     $(".info_link_popup").fadeIn(900);
     $("body").addClass("scroll_off");
+    // 스크롤 중지
+    $(".info_link_popup").on('scroll touchmove mousewheel', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+    });
 });
 
 // 닫기 버튼 클릭시

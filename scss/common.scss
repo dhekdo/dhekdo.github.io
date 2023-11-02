@@ -17,6 +17,7 @@ html {
     height: 100vh;
 
     .scroll_off {
+
         &::-webkit-scrollbar-thumb {
             height: 30%;
             background: $mainColor;
@@ -26,6 +27,7 @@ html {
         &::-webkit-scrollbar-track {
             background: $mainColor;
         }
+
     }
 
     body {
@@ -43,7 +45,6 @@ html {
         &::-webkit-scrollbar-thumb {
             height: 30%;
             background: $fontColor;
-            border-radius: 3px;
         }
         
         &::-webkit-scrollbar-track {

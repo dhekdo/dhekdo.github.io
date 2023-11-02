@@ -33,7 +33,6 @@ html body::-webkit-scrollbar {
 html body::-webkit-scrollbar-thumb {
   height: 30%;
   background: #000;
-  border-radius: 3px;
 }
 html body::-webkit-scrollbar-track {
   background: #fff;
