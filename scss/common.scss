@@ -1,0 +1,69 @@
+// $mainColor : #4801ff;
+$mainColor : gray;
+$fontColor : #000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Black Han Sans', sans-serif;
+    color: #fff;
+    font-size: 20px;
+}
+
+html {
+    background-color: $mainColor;
+    width: 100%;
+    height: 100vh;
+
+    .scroll_off {
+        &::-webkit-scrollbar-thumb {
+            height: 30%;
+            background: $mainColor;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $mainColor;
+        }
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+
+        &::-webkit-scrollbar {
+            width: 17px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            height: 30%;
+            background: $fontColor;
+            border-radius: 3px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-wrap: nowrap;
+}
+
+ul, li, ol {
+    list-style: none;
+}
+
