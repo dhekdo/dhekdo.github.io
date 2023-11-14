@@ -20,6 +20,14 @@ html .scroll_off::-webkit-scrollbar-thumb {
 html .scroll_off::-webkit-scrollbar-track {
   background: gray;
 }
+html .scroll_off_bl::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: #000;
+  border-radius: 3px;
+}
+html .scroll_off_bl::-webkit-scrollbar-track {
+  background: #000;
+}
 html body {
   width: 100%;
   height: 100%;
@@ -52,14 +60,6 @@ ul, li, ol {
   list-style: none;
 }
 
-header {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 2rem;
-  width: 100%;
-  z-index: 999;
-}
 @keyframes slideUp {
   0% {
     top: calc(100% - 15rem);
@@ -75,6 +75,14 @@ header {
   100% {
     top: calc(100% - 15rem);
   }
+}
+header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  z-index: 999;
 }
 header .logo_box {
   margin-bottom: 2rem;
@@ -165,7 +173,7 @@ header .info_box .info_link .right_info div a:first-child {
   width: 3.8rem;
   height: 3.8rem;
   border: 2px solid #fff;
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translate(-51%, -50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
   content: "";
@@ -178,7 +186,7 @@ header .info_box .info_link .right_info div a:first-child {
 }
 .info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:hover:after {
   opacity: 1;
-  transform: translateX(-50%) translateY(-50%) scale(1.3);
+  transform: translate(-51%, -50%) scale(1.3);
 }
 
 .main {
@@ -208,7 +216,61 @@ header .info_box .info_link .right_info div a:first-child {
   color: #000;
 }
 .main .main_link li div a {
-  font-size: 12.5rem;
+  font-size: 11rem;
   text-transform: uppercase;
   color: #000;
+  position: relative;
+}
+.main .main_link li div span {
+  color: #000;
+}
+.main .main_link li div span::before {
+  content: attr(data-info);
+  position: absolute;
+  top: 0;
+  left: -13rem;
+  font-size: 1.4rem;
+}
+.main .main_link li div span::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 10.5rem;
+  background-color: #000;
+  transform: rotate(25deg);
+}
+
+.main_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+.main_box .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+.main_box .pre_btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.main_box .pre_btn span {
+  color: #fff;
+  display: inline-block;
+  transform: rotate(-180deg);
+  font-size: 4.5rem;
+}
+.main_box .pre_btn span:hover {
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+  transition: all 0.3s;
 }
