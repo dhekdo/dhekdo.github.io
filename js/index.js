@@ -5,7 +5,7 @@ $(".home_bt").click(function(){
     home();
 });
 
-// 클릭시 로고 이동 메뉴 사라짐
+// 팝업박스 클릭시 로고 이동 메뉴 사라짐
 $(".popup_box a").click(function(){
     $(".logo_box").css({display:"flex", animation: "slideUp 0.8s ease-in-out forwards", height:0});
     $(".info_box").fadeOut();
@@ -17,6 +17,17 @@ $(".popup_box a").click(function(){
         event.stopPropagation();
         return false;
     });
+});
+
+// 팝업 박스 클릭 세분화
+$(".profile_bt").click(function(){
+    $(".profile_content").fadeIn(900);
+    $(".skill_content").css({display:"none"});
+});
+
+$(".skill_bt").click(function(){
+    $(".skill_content").fadeIn(900);
+    $(".profile_content").css({display:"none"});
 });
 
 // 닫기 버튼 클릭시

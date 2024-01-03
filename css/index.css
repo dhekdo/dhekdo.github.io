@@ -105,6 +105,29 @@ header .info_box {
   display: flex;
   align-items: center;
 }
+@keyframes textHover {
+  16.65% {
+    transform: translateX(8px);
+  }
+  33.3% {
+    transform: translateX(-6px);
+  }
+  49.95% {
+    transform: translateX(4px);
+  }
+  66.6% {
+    transform: translateX(-2px);
+  }
+  83.25% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+header .info_box a:hover {
+  animation: textHover 0.7s ease-in-out;
+}
 header .info_box .text_box {
   margin-right: 2rem;
   width: auto;
@@ -137,56 +160,6 @@ header .info_box .info_link .right_info div {
 }
 header .info_box .info_link .right_info div a:first-child {
   margin-bottom: 0.5rem;
-}
-
-.info_link_popup {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: none;
-  top: 0;
-  left: 0;
-  padding: 2rem;
-}
-.info_link_popup .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: gray;
-  opacity: 0.9;
-}
-.info_link_popup .info_link_popup_wrap .exit_btn {
-  float: right;
-}
-.info_link_popup .info_link_popup_wrap .exit_btn span {
-  cursor: pointer;
-  font-size: 3.8rem;
-  position: relative;
-  transition: all 0.3s;
-}
-.info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:after {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 3.8rem;
-  height: 3.8rem;
-  border: 2px solid #fff;
-  transform: translate(-51%, -50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-}
-.info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:after {
-  border-width: 2px;
-  transition: all 0.4s;
-}
-.info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:hover:after {
-  opacity: 1;
-  transform: translate(-51%, -50%) scale(1.3);
 }
 
 .main {
@@ -273,4 +246,228 @@ header .info_box .info_link .right_info div a:first-child {
   color: #000;
   -webkit-text-stroke: 2px #fff;
   transition: all 0.3s;
+}
+.main_box .port_wrap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: calc(100% - 17px);
+  height: 20%;
+  background-color: #fff;
+}
+
+.info_link_popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+}
+.info_link_popup .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  opacity: 0.9;
+}
+.info_link_popup .info_link_popup_wrap .exit_btn {
+  float: right;
+}
+.info_link_popup .info_link_popup_wrap .exit_btn span {
+  cursor: pointer;
+  font-size: 3.8rem;
+  position: relative;
+  transition: all 0.3s;
+  line-height: 1;
+}
+.info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:after {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 3.8rem;
+  height: 3.8rem;
+  border: 2px solid #fff;
+  transform: translate(-51%, -50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+.info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:after {
+  border-width: 2px;
+  transition: all 0.4s;
+}
+.info_link_popup .info_link_popup_wrap .exit_btn div.circleBehind span:hover:after {
+  opacity: 1;
+  transform: translate(-51%, -50%) scale(1.3);
+}
+.info_link_popup .info_link_popup_wrap .skill_content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto;
+  min-width: 1500px;
+}
+.info_link_popup .info_link_popup_wrap .skill_content h2 {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 4px solid #fff;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap {
+  background-color: #fff;
+  width: 95%;
+  height: 80%;
+  border-radius: 50px;
+  margin: 1.2rem auto 0;
+  padding: 3rem 2rem;
+}
+@keyframes per_95 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes per_90 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes per_85 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@keyframes per_80 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes per_75 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes per_70 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li {
+  width: 12%;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li span {
+  opacity: 0.3;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li img {
+  width: 70%;
+  transition: all 0.5s;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .bar {
+  display: inline-block;
+  width: 100%;
+  height: 7px;
+  position: relative;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .bar::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .bar::after {
+  content: "";
+  display: inline-block;
+  width: 95%;
+  height: 100%;
+  background-color: #f9e000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .js_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .git_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .figma_bar::after {
+  width: 85%;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .jq_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .json_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .ajax_bar::after {
+  width: 90%;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .vue_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .sql_bar::after {
+  width: 75%;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .react_bar::after {
+  width: 70%;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .ph_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .il_bar::after {
+  width: 80%;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li .per {
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover span {
+  opacity: 1;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover img {
+  transform: translateY(-10px) scale(1.1);
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .bar::after {
+  animation: per_95 2s forwards;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .jq_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .json_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .ajax_bar::after {
+  animation: per_90 2s forwards;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .js_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .git_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .figma_bar::after {
+  animation: per_85 2s forwards;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .ph_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .il_bar::after {
+  animation: per_80 2s forwards;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .vue_bar::after, .info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .sql_bar::after {
+  animation: per_75 2s forwards;
+}
+.info_link_popup .info_link_popup_wrap .skill_content .skill_wrap ul li:hover .react_bar::after {
+  animation: per_70 2s forwards;
 }

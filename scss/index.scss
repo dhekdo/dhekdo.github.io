@@ -56,6 +56,39 @@ header {
         display: flex;
         align-items: center;
 
+        @keyframes textHover {
+             16.65% {
+                transform: translateX(8px);
+              }
+            
+              33.3% {
+                transform: translateX(-6px);
+              }
+            
+              49.95% {
+                transform: translateX(4px);
+              }
+            
+              66.6% {
+                transform: translateX(-2px);
+              }
+            
+              83.25% {
+                transform: translateX(1px);
+              }
+            
+              100% {
+                transform: translateX(0);
+              }
+        }
+
+        a {
+
+            &:hover {
+                animation: textHover 0.7s ease-in-out;
+            }
+        }
+
         .text_box {
             margin-right: 2rem;
             width: auto;
@@ -100,66 +133,6 @@ header {
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-// 하단 정보 링크
-.info_link_popup {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    top: 0;
-    left: 0;
-    padding: 2rem;
-
-    .bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: $mainColor;
-        opacity: 0.9;
-    }
-
-    .info_link_popup_wrap {
-
-        .exit_btn {
-            float: right;
-
-            span {
-                cursor: pointer;
-                font-size: 3.8rem;
-                position: relative;
-                transition: all 0.3s;
-            }
-
-            div.circleBehind span:after {
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                width: 3.8rem;
-                height: 3.8rem;
-                border: 2px solid $fontWh;
-                transform: translate(-51%, -50%) scale(0.8);
-                border-radius: 50%;
-                background: transparent;
-                content: "";
-                opacity: 0;
-                transition: all 0.3s;
-            }
-
-            div.circleBehind span:after {
-                border-width: 2px;
-                transition: all 0.4s;
-            }
-
-            div.circleBehind span:hover:after {
-                opacity: 1;
-                transform: translate(-51%, -50%) scale(1.3);
             }
         }
     }
@@ -269,4 +242,298 @@ header {
             }
         }
     }
+
+    .port_wrap {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: calc(100% - 17px);
+        height: 20%;
+        background-color: #fff;
+    }
 }
+
+// 하단 정보 링크
+.info_link_popup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $mainColor;
+        opacity: 0.9;
+    }
+
+    .info_link_popup_wrap {
+
+        .exit_btn {
+            float: right;
+
+            span {
+                cursor: pointer;
+                font-size: 3.8rem;
+                position: relative;
+                transition: all 0.3s;
+                line-height: 1;
+            }
+
+            div.circleBehind span:after {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: 3.8rem;
+                height: 3.8rem;
+                border: 2px solid $fontWh;
+                transform: translate(-51%, -50%) scale(0.8);
+                border-radius: 50%;
+                background: transparent;
+                content: "";
+                opacity: 0;
+                transition: all 0.3s;
+            }
+
+            div.circleBehind span:after {
+                border-width: 2px;
+                transition: all 0.4s;
+            }
+
+            div.circleBehind span:hover:after {
+                opacity: 1;
+                transform: translate(-51%, -50%) scale(1.3);
+            }
+        }
+
+        // 프로필박스
+        // .profile_content {
+            
+        // }
+
+        // 스킬박스
+        .skill_content {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            height: auto;
+            min-width: 1500px;
+
+            h2 {
+                width: 95%;
+                margin: 0 auto;
+                padding-bottom: 0.5rem;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                text-align: center;
+                border-bottom: 4px solid $fontWh;
+            }
+
+            .skill_wrap {
+                background-color: $fontWh;
+                width: 95%;
+                height: 80%;
+                border-radius: 50px;
+                margin: 1.2rem auto 0;
+                padding: 3rem 2rem;
+
+                @keyframes per_95 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 95%;
+                    }
+                }
+
+                @keyframes per_90 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 90%;
+                    }
+                }
+
+                @keyframes per_85 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 85%;
+                    }
+                }
+
+                @keyframes per_80 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 80%;
+                    }
+                }
+
+                @keyframes per_75 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 75%;
+                    }
+                }
+
+                @keyframes per_70 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 70%;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    li {
+                        width: 12%;
+                        margin: 1rem 0.5rem;
+                        cursor: pointer;
+                        text-align: center;
+
+                        span {
+                            opacity: 0.3;
+                        }
+
+                        img {
+                            width: 70%;
+                            transition: all 0.5s;
+                        }
+
+                        .bar {
+                            display: inline-block;
+                            width: 100%;
+                            height: 7px;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                                background-color: lightgrey;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+
+                            &::after {
+                                content: "";
+                                display: inline-block;
+                                width: 95%;
+                                height: 100%;
+                                background-color: #f9e000;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                
+                            }
+                        }
+
+                        .js_bar, .git_bar, .figma_bar {
+                    
+                            &::after {
+                                width: 85%;
+                            }
+                        }
+
+                        .jq_bar, .json_bar, .ajax_bar {
+                    
+                            &::after {
+                                width: 90%;
+                            }
+                        }
+
+                        .vue_bar, .sql_bar {
+                    
+                            &::after {
+                                width: 75%;
+                            }
+                        }
+
+                        .react_bar {
+                    
+                            &::after {
+                                width: 70%;
+                            }
+                        }
+
+                        .ph_bar, .il_bar {
+
+                            &::after {
+                                width: 80%;
+                            }
+                        }
+
+                        .per {
+                            display: inline-block;
+                            width: 100%;
+                            color: #000;
+                            font-size: 1.2rem;
+                            text-align: center;
+                        }
+
+                        &:hover span {
+                            opacity: 1;
+                        }
+
+                        &:hover img {
+                            transform: translateY(-10px) scale(1.1);
+                        }
+
+                        &:hover .bar::after {
+                            animation: per_95 2s forwards;
+                        }
+
+                        &:hover .jq_bar::after,
+                        &:hover .json_bar::after,
+                        &:hover .ajax_bar::after {
+                            animation: per_90 2s forwards;
+                        }
+
+                        &:hover .js_bar::after,
+                        &:hover .git_bar::after,
+                        &:hover .figma_bar::after {
+                            animation: per_85 2s forwards;
+                        }
+                        
+                        &:hover .ph_bar::after,
+                        &:hover .il_bar::after {
+                            animation: per_80 2s forwards;
+                        }
+
+                        &:hover .vue_bar::after,
+                        &:hover .sql_bar::after {
+                            animation: per_75 2s forwards;
+                        }
+
+                        &:hover .react_bar::after {
+                            animation: per_70 2s forwards;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
