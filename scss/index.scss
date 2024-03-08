@@ -172,7 +172,8 @@ header {
             div {
 
                 a {
-                    font-size: 11rem;
+                    // font-size: 11rem;
+                    font-size: 13rem;
                     text-transform: uppercase;
                     color: $fontBl;
                     position: relative;
@@ -224,10 +225,11 @@ header {
 
     .pre_btn {
         position: absolute;
-        top: 2rem;
+        top: 0;
         right: 2rem;
         display: none;
         cursor: pointer;
+        z-index: 999;
 
         span {
             color: $fontWh;
@@ -249,8 +251,65 @@ header {
         right: 0;
         transform: translateY(-50%);
         width: calc(100% - 17px);
-        height: 20%;
-        background-color: #fff;
+        height: auto;
+        // background-color: #fff;
+
+        .mini_box {
+            width: 100%;
+            position: relative;
+
+            &:hover img {
+                opacity: 0.8;
+            }
+
+            
+            img {
+                width: 100%;
+                transition: all 0.5s;
+            }
+
+            .port_btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+
+                button {
+                    padding: 0.5rem 1.5rem;
+                    border: 3px solid $fontWh;
+                    background-color: transparent;
+                    cursor: pointer;
+                    opacity: 0;
+                    transition: all 0.3s;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background-color: $fontWh;
+                        border-color: $fontBl;
+                        color: $fontBl;
+                    }
+                }
+            }
+
+            &:hover button {
+                opacity: 1;
+            }
+
+            .mini_title_box {
+                position: absolute;
+                top: -3rem;
+                right: 10rem;
+
+                span {
+                    font-size: 9rem;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0);
+                    -webkit-text-stroke: 3px $fontWh;
+                }
+            }
+        }
     }
 }
 
@@ -314,9 +373,46 @@ header {
         }
 
         // 프로필박스
-        // .profile_content {
-            
-        // }
+        .profile_content {
+            position: absolute;
+            width: 60%;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            .profile_wrap {
+                display: flex;
+                justify-content: space-around;
+
+                .profile_img {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .profile_text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    ul {
+                        li {
+                            font-size: 2rem;
+
+                            &:first-child {
+                                text-transform: uppercase;
+                                border-bottom: 4px solid $fontWh;
+                                font-size: 2.5rem;
+                            }
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
 
         // 스킬박스
         .skill_content {
@@ -329,7 +425,7 @@ header {
             min-width: 1500px;
 
             h2 {
-                width: 95%;
+                width: 60%;
                 margin: 0 auto;
                 padding-bottom: 0.5rem;
                 font-size: 2.5rem;
@@ -340,7 +436,7 @@ header {
 
             .skill_wrap {
                 background-color: $fontWh;
-                width: 95%;
+                width: 60%;
                 height: 80%;
                 border-radius: 50px;
                 margin: 1.2rem auto 0;
@@ -402,7 +498,7 @@ header {
 
                 ul {
                     display: flex;
-                    flex-wrap: wrap;
+                    // flex-wrap: wrap;
                     justify-content: space-around;
 
                     li {
