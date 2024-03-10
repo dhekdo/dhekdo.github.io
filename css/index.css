@@ -212,6 +212,9 @@ header .info_box .info_link .right_info div a:first-child {
   background-color: #000;
   transform: rotate(25deg);
 }
+.main .main_link li:nth-child(3) div span::before {
+  left: -6rem;
+}
 
 .main_box {
   position: fixed;
@@ -258,6 +261,7 @@ header .info_box .info_link .right_info div a:first-child {
 }
 .main_box .port_wrap .mini_box {
   width: 100%;
+  height: 60vh;
   position: relative;
 }
 .main_box .port_wrap .mini_box:hover img {
@@ -265,6 +269,7 @@ header .info_box .info_link .right_info div a:first-child {
 }
 .main_box .port_wrap .mini_box img {
   width: 100%;
+  height: 100%;
   transition: all 0.5s;
 }
 .main_box .port_wrap .mini_box .port_btn {
@@ -274,7 +279,9 @@ header .info_box .info_link .right_info div a:first-child {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.main_box .port_wrap .mini_box .port_btn button {
+.main_box .port_wrap .mini_box .port_btn a {
+  color: #fff;
+  display: inline-block;
   padding: 0.5rem 1.5rem;
   border: 3px solid #fff;
   background-color: transparent;
@@ -284,12 +291,12 @@ header .info_box .info_link .right_info div a:first-child {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-.main_box .port_wrap .mini_box .port_btn button:hover {
+.main_box .port_wrap .mini_box .port_btn a:hover {
   background-color: #fff;
   border-color: #000;
   color: #000;
 }
-.main_box .port_wrap .mini_box:hover button {
+.main_box .port_wrap .mini_box:hover a {
   opacity: 1;
 }
 .main_box .port_wrap .mini_box .mini_title_box {

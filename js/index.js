@@ -64,16 +64,7 @@ $(".main_link>li").click(function(){
 
     $(this).css({transform : "translate(0,0)"});
     $("body").addClass("scroll_off_bl");
-    // $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards"}).mouseover(function(){
-    //     $(".logo .logo_text").css({color:"#000"});
-    // }).mouseout(function(){
-    //     $(".logo .logo_text").css({color:"#fff"})
-    // });
-    // $("nav a, nav li").css({color : "#fff"});
-    // $(".info li:last-child").fadeOut();
-    $(".content").fadeIn(600,function(){
-        $(".slide_wrap>div").eq(titleIndex).fadeIn();
-    });
+    $(".main_box .port_wrap >div").eq(titleIndex).fadeIn().siblings().hide();
     
 });
 
