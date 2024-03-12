@@ -69,15 +69,15 @@ $(".main_link>li").click(function(){
 });
 
 $(".built_box > .port_btn").click(function(){
-    alert("1080*1920 고정값으로 작업한 프로젝트입니다.")
+    alert("1080*1920 고정값으로 작업한 프로젝트입니다.\n(회사 프로젝트로 일부 기능만 적용)")
 });
 
 $(".yes_locker > .port_btn a:first").click(function(){
-    alert("1080*1920 고정값으로 작업한 프로젝트입니다.");
+    alert("1080*1920 고정값으로 작업한 프로젝트입니다.\n(회사 프로젝트로 일부 기능만 적용)");
 });
 
 $(".yes_locker > .port_btn a:last").click(function(){
-    alert("모바일 사이즈로 작업한 프로젝트입니다.");
+    alert("모바일 사이즈로 작업한 프로젝트입니다.\n(회사 프로젝트로 일부 기능만 적용)");
 });
 
 

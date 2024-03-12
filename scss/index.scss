@@ -226,6 +226,19 @@ header {
                     }
                 }
             }
+
+            &:nth-child(5),
+            &:nth-child(6) {
+                div {
+                    span {
+
+                        &::before {
+                            left:-11.5rem;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
@@ -338,12 +351,6 @@ header {
                     -webkit-text-stroke: 3px $fontWh;
                 }
             }
-
-            // &.yes_locker {
-            //     .port_btn {
-
-            //     }
-            // }
         }
     }
 }
