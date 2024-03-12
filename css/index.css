@@ -215,6 +215,9 @@ header .info_box .info_link .right_info div a:first-child {
 .main .main_link li:nth-child(3) div span::before {
   left: -6rem;
 }
+.main .main_link li:nth-child(5) div span::before {
+  left: -11rem;
+}
 
 .main_box {
   position: fixed;
