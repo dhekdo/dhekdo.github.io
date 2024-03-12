@@ -72,6 +72,13 @@ $(".built_box > .port_btn").click(function(){
     alert("1080*1920 고정값으로 작업한 프로젝트입니다.")
 });
 
+$(".yes_locker > .port_btn a:first").click(function(){
+    alert("1080*1920 고정값으로 작업한 프로젝트입니다.");
+});
+
+$(".yes_locker > .port_btn a:last").click(function(){
+    alert("모바일 사이즈로 작업한 프로젝트입니다.");
+});
 
 
 // 뒤로가기 버튼 클릭시
