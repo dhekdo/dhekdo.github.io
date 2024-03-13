@@ -240,8 +240,8 @@ header .info_box .info_link .right_info div a:first-child {
 }
 .main_box .pre_btn {
   position: absolute;
-  top: 0;
-  right: 2rem;
+  top: 0.5rem;
+  right: 1rem;
   display: none;
   cursor: pointer;
   z-index: 999;
@@ -267,7 +267,7 @@ header .info_box .info_link .right_info div a:first-child {
 }
 .main_box .port_wrap .mini_box {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   position: relative;
 }
 .main_box .port_wrap .mini_box:hover img {
